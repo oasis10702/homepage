@@ -1,0 +1,735 @@
+/* Global */
+*{
+	font-family: 微軟正黑體;
+	position: relative;
+	box-sizing: border-box; /*讓padding,border等不佔有寬度*/
+
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+.clearfix{
+	clear: both;
+	height: 0;
+}
+.container{
+	max-width: 1080px;
+	padding: 0 20px; /*上下 左右*/
+	margin: 0 auto;
+	height: 100%;
+	/*border: 1px solid #000;*/
+}	
+h3.bigTitle_1{
+	font-size: 40px;
+	font-weight: 200;
+	line-height: 50px;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #333;
+}
+p.center_text{
+	text-align: center;
+	font-size: 18px;
+	line-height: 34px;
+	color: #666;
+}
+.giveHeight{
+	padding-top: 120px;
+	padding-bottom: 125px;
+}
+/* header */
+header{
+	height: 80px;
+	/*border: 1px solid #000;*/
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	z-index: 2;
+	position: fixed;
+	width: 100%;
+	background-color: #fff; 
+}
+header .logo{
+	display: inline-block;
+	line-height: 80px;
+	color: #2ed3ae;
+	font-size: 20px;
+	font-weight: 800;
+}
+header ul{
+	float: right;
+	margin-top: 30px;
+}
+header li{
+	float: left;
+}
+header ul li a{
+	padding: 10px 0;
+	margin-left: 40px;
+	color: #666;
+	font-weight: 800;
+}
+header .closeMenu{
+	display: none;G
+}
+/*滑鼠動畫*/
+header ul li a:after{
+	content: "";
+	width: 0;
+	height: 3px;
+	background-color: #2ed3ae;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: all 0.3s;
+}
+header ul li a:hover{
+	color: #2ed3ae;
+}
+header ul li a:hover:after{
+	width: 100%;
+}
+/* main */
+.main{
+
+
+}
+/* Banner */
+.bannerContainer{
+	/*border: 1px solid #000;*/
+	background: url(../images/banner.jpg);
+	background-position: center; /*圖片置中*/
+	background-size: cover; /*適應框*/
+}
+.bannerContainer .content{
+	padding: 32vh 0;
+	text-align: center;
+
+}
+.bannerContainer h2{
+	font-size: 80px;
+	font-weight: 400;
+	text-align: center;
+	color: #000;
+	margin-bottom: 40px;
+}
+.bannerContainer h2 span{
+	color: #2ed3ae;
+}
+.bannerContainer p{
+	font-size: 24px;
+	line-height: 36px;
+}
+.bannerContainer .btnGroup{
+	text-align: center;
+}
+.bannerContainer .bannerBtn{
+	display: inline-block;
+	padding: 23px 37px;
+	border-radius: 4px;
+	margin: 37px 10px 0 10px;
+	color: #fff;
+
+}
+.bannerContainer .bannerBtn_1{
+	background-color: #2ed3ae;
+}
+.bannerContainer .bannerBtn_2{
+	background-color: #000;
+}
+.bannerContainer .bannerBtn_1:hover{
+	background-color: #000;
+}
+.bannerContainer .bannerBtn_2:hover{
+	background-color: #2ed3ae;
+}
+/* Sometext */
+.someTextContainer{
+	background-color: #fefefe;
+	padding-right: 20%;
+	padding-left: 20%;
+}
+.someTextContainer_2{
+	padding-right: 20%;
+	padding-left: 20%;
+	background-color: #2ed3ae;	
+	margin: 0 auto;
+}
+/* Myinfo */
+.myInfoContainer{
+	background-color: #eee;
+
+}
+.myInfoContainer .col{
+	/*border: 1px solid #000;*/
+	width: 50%;
+	float: left;
+}
+.myInfoContainer .col_1{
+	background-color: #2ed3ae;
+	min-height:  540px;
+}
+.myInfoContainer .infoCard{
+	max-width: 75%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+.myInfoContainer .infoCard .imgBox{
+	display: inline-block;
+	vertical-align: top;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	border-radius: 50%;
+	/*overflow: hidden;*/
+	box-shadow: 0 0 0 8px #fff;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+.myInfoContainer .infoCard .imgBox img{
+	width: 100%;
+	border-radius: 50%;
+}
+.myInfoContainer .infoCard .imgBox:after{
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 4px solid #fff;
+	background-color: #ff1443;
+	border-radius: 50%;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+	/*定位 對到上面的img_box*/
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+}
+.myInfoContainer .infoCard .infoBox{
+	display: inline-block;
+	width: calc(100% - 160px);
+	margin-left: 40px;
+}
+.myInfoContainer .infoCard h3{
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+.myInfoContainer .infoCard h4{
+	color: #fff;
+	margin-bottom: 20px;
+}
+.myInfoContainer .infoCard h4 i{
+	margin-right: 10px;
+	color: #d14078;
+}
+.myInfoContainer .infoCard p{
+	font-size: 16px;
+	line-height: 30px;
+	color: #fff;
+}
+.myInfoContainer .infoBox{
+	float: right;
+}
+.myInfoContainer .linksGroup li{
+	width: 25%;
+	/*border: 1px solid #000;*/
+	float: left;
+	/*讓邊界不影響排版*/
+	box-sizing: border-box;
+}
+.myInfoContainer .linksGroup li a{
+	/*讓連結佔滿整行*/
+	display: block;
+	text-align: center;
+	padding: 10px;
+}
+.myInfoContainer .linksGroup li a i{
+	color: #fff;
+}
+.myInfoContainer .col_2 p{
+	line-height: 30px;
+	width: 70%;
+	margin: 0 auto;
+}
+.myInfoContainer .mySkills{
+	width: 80%;
+	margin: 0 auto;
+}
+.myInfoContainer .mySkills h3{
+	font-size: 30px;
+	color: #2ed3ae;
+	margin-bottom: 30px;
+}
+.myInfoContainer .skillItem{
+	margin-bottom: 20px;
+}
+.myInfoContainer .skillItem .skillName{
+	margin-bottom: 10px;
+}
+.myInfoContainer .skillItem .data{
+	width: 100%;
+}
+.myInfoContainer .skillItem .bar{
+	display: inline-block;
+	width: calc(100% - 80px);
+	height: 30px;
+	border: 1px solid #2ed3ae;
+}
+.myInfoContainer .skillItem .percent{
+	color: #2ed3ae;
+	float: right;
+	line-height: 30px;
+	font-weight: 800;
+	font-size: 20px;
+}
+.myInfoContainer .skillItem .bar span{
+	height: 100%;
+	background-color: #2ed3ae;
+	display: block;
+}
+.myInfoContainer .skillDesign .skillName{
+	color: #ff9838;
+}
+.myInfoContainer .skillHtml .skillName{
+	color: #ff75b7;
+}
+.myInfoContainer .skillCss .skillName{
+	color: #4f80ff;
+}
+.myInfoContainer .skillDesign .bar span{
+	width: 65%;
+}
+.myInfoContainer .skillHtml .bar span{
+	width: 80%;
+}
+.myInfoContainer .skillCss .bar span{
+	width: 75%;
+}
+
+/*Myworks*/
+.myWorksContainer .des{
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+.myWorksGroup{
+	margin-bottom: 120px;
+}
+.myWorksSingle{
+	/*border: 1px solid #000;*/
+	/*height: 500px;*/
+	/*width: 33.33333%;*/
+	float: left;
+	margin-bottom: 40px;
+	/*padding: 0 20px;*/
+}
+.myWorksSingle .imgBox{
+	display: block;
+	width: 100%;
+
+	/*border: 1px solid red;*/
+	margin-bottom: 20px;
+}
+.myWorksSingle .imgBox img{
+	width: 100%;
+	display: block;
+}
+.myWorksSingle h4{
+	font-size: 24px;
+	line-height: 50px;
+	font-weight: 300;
+	color: #444;
+}
+.myWorksSingle span.time{
+	color: #2ed3ae;
+	font-weight: 800;
+	line-height: 30px;
+}
+.myWorksSingle p{
+	font-size: 14px;
+	line-height: 30px;
+	color: #666;
+	margin-bottom: 20px;
+}
+.myWorksSingle a.moreBtn{
+	float: right;
+	padding: 5px 10px;
+	background-color: #2ed3ae;
+	border: 1px solid #2ed3ae;
+	color: #fff;
+	border-radius: 4px;
+	transition: all 0.2s;
+}
+.myWorksSingle a.moreBtn:hover{
+	background-color: #fff;
+	border: 1px solid #2ed3ae;
+	color: #2ed3ae;
+}
+/* owl */
+.myWorksGroup .owl-nav .owl-prev{
+	background-color: #2ed3ae;
+}
+.myWorksGroup .owl-nav .owl-prev:hover{
+	background-color: #fff;
+	border: 1px solid #2ed3ae;
+	color: #2ed3ae;
+}
+.myWorksGroup .owl-nav .owl-next{
+	background-color: #2ed3ae;
+}
+.myWorksGroup .owl-nav .owl-next:hover{
+	background-color: #fff;
+	border: 1px solid #2ed3ae;
+	color: #2ed3ae;
+}
+.myWorksGroup .owl-dots .owl-dot span{
+	background-color: #2ed3ae;
+}
+/* owl */
+
+/* MoreWorks */
+.moreWorksContainer{
+	padding-bottom: 125px;
+}
+.moreWorksSingle{
+	float: left;
+	width: 24%;
+	margin: 0.5% 0.5%;
+}
+.moreWorksSingle .cover{
+	font-size: 80px;
+	line-height: 80px;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(46, 211, 174, 0);
+	transition: all 0.4s;
+}
+.moreWorksSingle .cover:hover{
+	background-color: rgba(46, 211, 174, 0.8);
+}
+.moreWorksSingle .cover:after{
+	content: "+";
+	font-size: 200;
+	font-size: 0px;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.moreWorksSingle .cover:hover:after{
+	font-size: 80px;
+	transition: all 0.2s 0.2s;
+}
+.moreWorksSingle img{
+	width: 100%;
+	display: block;
+}
+/* Contact */
+.contactContainer p{
+	margin-bottom: 40px;
+}
+.contactContainer ul{
+	width: 300px;
+	margin: 0 auto;
+}
+.contactContainer ul li{
+	float: left;
+	width: 33.33333%;
+}
+.contactContainer ul li a{
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	width: 40px;
+	height: 40px;
+	border: 2px solid #2ed3ae;
+	border-radius: 50%;
+	color: #2ed3ae;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+.contactContainer ul li a:hover{
+	color: #fff;
+}
+.contactContainer ul li a:before{
+	content: "";
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: all 0.3s;
+}
+.contactContainer ul li a:hover:before{
+	width: 100%;
+	height: 100%;
+	background-color: #2ed3ae;
+}
+.contactContainer ul li a i{
+	line-height: 37px;
+	font-size: 22px;
+}
+/* Footer */
+footer{
+	
+}
+footer .linksGroup{	
+	background-color: #f8f8f8;
+}
+footer .linksGroup .container{
+	padding-right: 0;
+	padding-left: 0;
+}
+footer .col{
+	float: left;
+	width: 25%;
+	padding: 0 20px;
+}
+footer h5{
+	margin-bottom: 20px;
+	color: #444;
+}
+footer .col p{
+	line-height: 30px;
+	color: #666;
+}
+footer .col ul li{
+	line-height: 30px;
+	color: #666;
+}
+footer .col ul li a{
+	color: #666;
+}
+footer .col .highLighter{
+	color: #2ed3ae;
+}
+footer .copyRight{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+footer .copyRight .Right{
+	color: #666;
+	display: inline-block;
+}
+footer .copyRight ul{
+	float: right;
+}
+footer .copyRight ul li{
+	float: left;
+	margin-left: 20px;
+}
+footer .copyRight ul li a{
+	color: #2ed3ae;
+	font-size: 20px;
+}
+
+/* RWD setting */
+@media screen and (max-width: 1100px){
+	.myInfoContainer .infoCard {
+	    margin-top: 0px;
+	}
+	.myInfoContainer .infoCard .imgBox {
+	    display: block;
+	    margin-bottom: 40px;
+	    margin-top: 0px;
+	}
+	.myInfoContainer .infoCard .infoBox {
+	    display: block;
+	    width: 100%;
+	    margin-left: 0px;
+	}
+	.myInfoContainer .infoCard h3 {
+	    text-align: center;
+	}
+	.myInfoContainer .infoCard h4 {
+	   	text-align: center;
+	}
+	.myInfoContainer .infoCard p {
+	    text-align: center;
+	}
+}
+@media screen and (max-width: 1024px){
+	footer .col {
+	    width: 50%;
+	    margin-bottom: 40px;
+	}
+	footer .copyRight .Right {
+	    display: block;
+	    text-align: center;
+	    margin-bottom: 20px;
+	}
+	footer .copyRight ul {
+	    float: none;
+	    width: 200px;
+	    margin: 0 auto;
+	}
+	footer .copyRight ul li {
+	    float: left;
+	    width: 20%;
+	    margin: 0;
+	}
+	footer .copyRight ul li a{
+		text-align: center;
+		display: block;
+	}
+}
+@media screen and (max-width: 960px){
+	.giveHeight{
+		padding-top: 50px;
+		padding-bottom: 55px;
+	}
+	.bannerContainer .content {
+	    padding: 32% 20px;
+	}
+	.bannerContainer h2 {
+	    font-size: 40px;
+	    margin-bottom: 30px;
+	}
+	.bannerContainer p {
+	    font-size: 22px;
+	    font-weight: 200;
+	    margin-bottom: 40px;
+	}
+	.bannerContainer .bannerBtn {
+	    margin: 15px;
+	}
+	h3.bigTitle_1{
+		font-size: 28px;
+	}
+	.myInfoContainer .col {
+	    float: none;
+	    width: 100%;
+	}
+	.myInfoContainer .col_1 {
+	    min-height: initial;
+	}
+	
+}
+@media screen and (max-width: 768px){
+	header {
+	    height: 60px;
+	}
+	header .container{
+		padding: 0;
+		padding-right: 5px;
+		padding-left: 15px;
+	}
+	header .logo{
+	    display: inline-block;
+	    line-height: 60px;
+	}
+	/* 漢堡 */
+	header .menuBtn{
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		float: right;
+		padding: 8px 0;
+		padding-right: 0;
+		margin-top: 5px;
+	}
+	header .menuBtn span{
+		display: block;
+		width: 70%;
+		height: 2px;
+		background-color: #2ed3ae;
+		margin: 0 auto;
+		margin-top: 7px;
+	}
+	header #overlay{
+		opacity: 0;
+		visibility: hidden;
+		margin-top: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		transition: all 0.3s;
+		padding-top: 30%;
+	}
+	header #overlay:target{
+		opacity: 1;
+		visibility: visible;
+	}
+	header .closeMenu{
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		font-size: 40px;
+		color: #2ed3ae;
+	}
+	header ul li {
+	    float: none;
+	}
+	header ul li a {
+		display: block;
+		line-height: 44px;
+	    padding: 0px;
+	    margin-left: 0px;
+	    text-align: center;
+	}
+	header ul li a:after {
+	    height: 1px;
+	}
+	.main{
+		padding-top: 60px;
+	}
+	.someTextContainer{
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.someTextContainer_2{
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.myWorksSingle h4 {
+	    font-size: 20px;
+	}
+	.myWorksSingle {
+	    width: 50%;
+	}
+	.moreWorksSingle {
+	    float: left;
+	    width: 48%;
+	    margin: 1% 1%;
+	}
+	footer .col {
+	    width: 100%;
+	    float: none;
+	}
+}
+@media screen and (max-width: 540px){
+	.myWorksSingle {
+	    width: 100%;
+	    padding: 0;
+	}
+	.moreWorksSingle {
+	    float: none;
+	    display: block;
+	    width: calc(100% - 40px);
+	    margin: 20px 20px;
+	}
+	.contactContainer ul {
+	    width: 200px;
+	    margin: 0 auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
